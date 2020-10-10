@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import AppBar from './components/Appbar/Appbar';
@@ -6,6 +6,15 @@ import Drawer from './components/Drawer/Drawer';
 import Grid from "@material-ui/core/Grid";
 import Paper from '@material-ui/core/Paper';
 import Button from "./components/AwesomeButton/Button";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
+
+const Pages = {
+  Contact: () => <Contact/>,
+  About: () => <About/>, 
+  Portfolio: () => <Portfolio/>
+}
 
 const styles = {
   GridContainer: {
@@ -21,6 +30,13 @@ const styles = {
 }
 
 function App() {
+  const [page, setPage] = useState("About");
+
+  const handleSetPage = name => {
+    console.log(name)
+    setPage(name)
+  }
+
   return (
     <>
 
@@ -35,15 +51,15 @@ function App() {
     <Grid container  direction="column">
       <Grid item style={styles.ButtonGrid}>
 
-    <Button variant="google" text={`About`}/>
+    <Button variant="instagram" onClick={() => handleSetPage("About")} text={`About`}/>
       </Grid>
       <Grid item style={styles.ButtonGrid}>
 
-    <Button variant="google" text={`Portfolio`}/>
+    <Button variant="google" onClick={() => handleSetPage("Portfolio")} text={`Portfolio`}/>
       </Grid>
       <Grid item style={styles.ButtonGrid}>
 
-    <Button variant="google" text={`Contact`}/>
+    <Button variant="reddit" onClick={() => handleSetPage("Contact")} text={`Contact`}/>
       </Grid>
     </Grid>
 
@@ -52,7 +68,7 @@ function App() {
     <Grid item xs={10}>
 
   <Paper elevation={10} className="content" style={{borderRadius: "0 6px 6px 0"}}>
-  
+    {Pages[page]()}
   </Paper>
     </Grid>
 </Grid>

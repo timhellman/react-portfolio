@@ -11,13 +11,22 @@ import MenuIcon from '@material-ui/icons/Menu';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  
   },
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
     flexGrow: 1,
+    fontFamily: 'Nanum Myeongjo, serif',
+    textShadow: '3px 3px 3px lightslategray',
+    color: 'gray'
   },
+  AppBar: {
+    background: '-webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996)',  /* Chrome 10-25, Safari 5.1-6 */
+    background: 'linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996)' /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  }
 }));
 
 export default function ButtonAppBar({brand}) {
@@ -25,7 +34,7 @@ export default function ButtonAppBar({brand}) {
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar className={classes.AppBar} position="fixed">
         <Toolbar>
           <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
             <MenuIcon />

@@ -3,11 +3,12 @@ import { AwesomeButton } from "react-awesome-button";
 import "./style.css";
 
 
-function Button({text, variant}) {
+function Button({text, variant, onClick}) {
     return (
       <AwesomeButton
         size="large"
         type= {variant||"primary"}
+        onPress={onClick}
       >
         {text}
       </AwesomeButton>
