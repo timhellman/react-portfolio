@@ -51,7 +51,7 @@ function App() {
     <Grid container  direction="column">
       <Grid item style={styles.ButtonGrid}>
 
-    <Button variant="instagram" onClick={() => handleSetPage("About")} text={`About`}/>
+    <Button variant="google" onClick={() => handleSetPage("About")} text={`About`}/>
       </Grid>
       <Grid item style={styles.ButtonGrid}>
 
@@ -59,7 +59,7 @@ function App() {
       </Grid>
       <Grid item style={styles.ButtonGrid}>
 
-    <Button variant="reddit" onClick={() => handleSetPage("Contact")} text={`Contact`}/>
+    <Button variant="google" onClick={() => handleSetPage("Contact")} text={`Contact`}/>
       </Grid>
     </Grid>
 

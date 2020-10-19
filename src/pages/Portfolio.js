@@ -76,27 +76,44 @@ export default () => {
         </Grid>
         <Grid item xs={6} style={styles.PortfolioGrid}>
           <Card style={{ width: '24rem',margin:"auto"}}>
-            <Card.Img variant="top" src={project2} />
+            <Card.Img variant="top" src={project3} />
             <Card.Body>
-              <Card.Title>Express Bartender</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
-    </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Card.Title>Inform And React</Card.Title>
+              <p data-tip="Github!">
+
+<a href="https://github.com/Koldenblue/Inform-and-React" target="_blank">
+<Button style={styles.iconButton} variant="outline">
+  <GitHubIcon style={{margin:"auto"}}/>
+</Button>
+</a>
+</p>
+<ReactTooltip effect="float"/>
+              
+              {/* <Card.Text>
+               
+    </Card.Text> */}
+              {/* <Button variant="primary">Go somewhere</Button> */}
             </Card.Body>
           </Card>
         </Grid>
         <Grid item xs={6} style={styles.PortfolioGrid}>
           <Card style={{ width: '24rem',margin:"auto" }}>
-            <Card.Img variant="top" src={project2} />
+            <Card.Img variant="top" src={burgerhomework} />
             <Card.Body>
-              <Card.Title>Express Bartender</Card.Title>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+              <Card.Title>Eat Da Burger!</Card.Title>
+              {/* <Card.Text>
+              
     </Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              <Button variant="primary">Go somewhere</Button> */}
+               <p data-tip="Github!">
+
+<a href="https://github.com/timhellman/burger" target="_blank">
+<Button style={styles.iconButton} variant="outline">
+  <GitHubIcon style={{margin:"auto"}}/>
+</Button>
+</a>
+</p>
+<ReactTooltip effect="float"/>
             </Card.Body>
           </Card>
         </Grid>

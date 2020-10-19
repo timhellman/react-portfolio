@@ -27,10 +27,13 @@ export default () => {
     }
     
       return (
+        <main id="contact">
         <form className={classes.root} noValidate autoComplete="off">
           <div>
-            
-          <TextField
+        <h3>Contact Me!</h3>  
+          <p>timhellman@yahoo.com</p>
+          
+          {/* <TextField
             onChange={handleChange}
             id="outlined-secondary"
             label="Your Name"
@@ -64,9 +67,10 @@ export default () => {
             rows={20}
             multiline={true}
             />
-            <button onClick={handleSubmit}>Submit</button>
+            <button onClick={handleSubmit}>Submit</button> */}
             </div>
         </form>
+        </main>
       );
     }
     
