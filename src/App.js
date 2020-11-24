@@ -47,7 +47,7 @@ function App() {
 <Grid container style={styles.GridContainer}>
   
   <Grid item xs={2} >
-  <Paper elevation={10} className="sidenav" style={{borderRadius: "6px 0 0 6px"}}>
+  <Paper elevation={20} className="sidenav" style={{borderRadius: "6px 0 0 6px"}}>
     <Grid container  direction="column">
       <Grid item style={styles.ButtonGrid}>
 
